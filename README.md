@@ -8,7 +8,7 @@ Foco em transformação de dados, modelagem dimensional, pipelines ELT modernos,
 
 # 💼 Sobre
 
-Engenheiro de Dados com background sólido em **Analytics Engineering**, atuando com:
+Profissional de dados com experiência em **Analytics Engineering** e **Engenharia de Dados**, atuando com:
 
 - **Modelagem dimensional** (Star Schema, SCD Tipo 2/3)  
 - **Transformações SQL** e dbt  
@@ -47,8 +47,8 @@ Engenheiro de Dados com background sólido em **Analytics Engineering**, atuando
 **Arquitetura:** API → Ingestão → DW → Transformações → Dashboard  
 
 📁 **Documentação:** [Weather-Analytics/README.md](Weather-Analytics/README.md)  
-🌐 **Dashboard:** https://jeysel.github.io/Engenharia-Dados/
-
+🌐 **Dashboard:** https://jeysel.github.io/Analytics-Engineer/
+ 
 ---
 
 ## 🔧 Data Engineering
@@ -65,7 +65,7 @@ Engenheiro de Dados com background sólido em **Analytics Engineering**, atuando
 **Sistema automático de extração de dados estruturados de PDFs**
 
 **Stack:** Python, OCR (Tesseract), PostgreSQL, Docker  
-📁 **Documentação:** [search-ssp-sc/Como-Usar.md](search-ssp-sc/Como-Usar.md)
+📁 **Documentação:** [search-ssp-sc/README.md](search-ssp-sc/README.md)
 
 ---
 
@@ -76,8 +76,8 @@ Engenheiro de Dados com background sólido em **Analytics Engineering**, atuando
 Pipeline completo para ingestão, padronização e análise de compras públicas (SC + Betha).  
 Foco em **licitado x contratado**, competitividade e comportamento dos órgãos.
 
-📁 **Projeto:** `compras-publicas/`  
-📄 **README:** compras-publicas/README.md
+📁 **Projeto:** [compras-publicas/](compras-publicas/)  
+📄 **README:** [compras-publicas/README.md](compras-publicas/README.md)
 
 ---
 
@@ -86,7 +86,8 @@ Foco em **licitado x contratado**, competitividade e comportamento dos órgãos.
 Pipeline para análise de planejamento e execução orçamentária (SICONFI + SC).  
 Foco em **dotação inicial x atualizada x executada**.
 
-📁 **Projeto:** `orcamento-publico/`
+📁 **Projeto:** [orcamento-publico/](orcamento-publico/)
+📄 **README:** [orcamento-publico/README.md](orcamento-publico/README.md)
 
 ---
 
@@ -94,57 +95,106 @@ Foco em **dotação inicial x atualizada x executada**.
 **Status:** ⚪ *Backlog*  
 Pipeline para ingestão e análise de indicadores financeiros, fundos e títulos públicos.
 
-📁 **Projeto:** `api-financeira/`
+📁 **Projeto:** [api-financeira/](api-financeira/)
+📄 **README:** [api-financeira/README.md](api-financeira/README.md)
+
+---
+
+# 📚 Formação e Projetos de Curso
+
+Concluí a **Formação em Engenharia de Analytics da Indicium.ai**, composta por trilha completa em fundamentos, SQL, modelagem analítica, dbt, storytelling, data design e dashboards.  
+Essa formação estruturada reforça minha base teórica e prática em **Analytics Engineering**.
+
+---
+
+## 🎓 Projeto Prático — Engenharia de Analytics com dbt (Indicium.ai)
+
+Durante o módulo de Engenharia de Analytics, desenvolvi um projeto completo utilizando **dbt Cloud** e **Databricks**, aplicando boas práticas de modelagem, versionamento e transformação de dados em arquitetura Lakehouse.
+
+🔗 **Repositório do projeto (fork):**  
+https://github.com/jeysel/banvic-dbt
+
+**Principais aprendizados aplicados:**
+
+- Organização de camadas dbt (staging → intermediate → marts)  
+- Modelagem incremental em ambiente Lakehouse  
+- Testes e documentação nativos do dbt Cloud  
+- Integração dbt Cloud → Databricks SQL Warehouse  
+- Transformações orientadas ao negócio  
+- Estrutura de projeto profissional e versionamento  
+
+Esse projeto complementa meus projetos autorais e reforça minha base prática em **dbt + Databricks**, stack amplamente utilizada no mercado.
+
+---
+
+## 🧪 Desafio Final — Certificação Analytics Engineer (Indicium.ai)
+
+Após concluir toda a trilha, estou apto a participar do **Desafio Final da Indicium**, etapa prática que avalia habilidades reais de Analytics Engineering em um projeto completo.
+
+📌 **Status:** Aguardando escopo do desafio  
+📁 **Repositório:** *(será adicionado assim que o projeto iniciar)*
+
+Caso aprovado:
+
+- receberei a **certificação oficial de Analytics Engineer pela Indicium.ai**  
+- serei incluído no **pool de talentos da Indicium**, com acesso a oportunidades exclusivas  
+
+O desafio consolida competências como:
+
+- pipelines ELT completos  
+- modelagem dimensional aplicada  
+- dbt Cloud avançado (tests, docs, macros, exposures)  
+- boas práticas de engenharia e governança  
+- entrega orientada a valor  
 
 ---
 
 # 📚 Estrutura do Repositório
 
-Analytics-Engineer/
-│
-├── compras-publicas/              # 🟡 Em desenvolvimento
-│   ├── data/
-│   ├── docs/
-│   ├── src/
-│   └── tests/
-│
-├── orcamento-publico/             # ⚪ Backlog
-│   ├── data/
-│   ├── docs/
-│   ├── src/
-│   └── tests/
-│
-├── api-financeira/                # ⚪ Backlog
-│   ├── data/
-│   ├── docs/
-│   ├── src/
-│   └── tests/
-│
-│
-├── Data-Warehouse/                # Analytics Engineering: DW dimensional
-│   ├── docs/
-│   ├── sql/
-│   └── docker/
-│
-├── Weather-Analytics/             # Pipeline ELT moderno end-to-end
-│   ├── airbyte/
-│   ├── dbt/
-│   ├── evidence/
-│   ├── postgresql/
-│   └── docker/
-│
-├── ETL-Real-Time/                 # Data Engineering: Streaming
-│   ├── airflow/
-│   ├── kafka/
-│   ├── spark/
-│   └── cassandra/
-│
-├── search-ssp-sc/                 # Data Engineering: OCR extraction
-│   ├── src/
-│   ├── docker/
-│   └── docs/
-│
-└── README.md                      # README principal do portfólio
+Analytics-Engineer/  
+│  
+├── compras-publicas/  
+│   ├── data/  
+│   ├── docs/  
+│   ├── src/  
+│   └── tests/  
+│  
+├── orcamento-publico/  
+│   ├── data/  
+│   ├── docs/  
+│   ├── src/  
+│   └── tests/  
+│  
+├── api-financeira/  
+│   ├── data/  
+│   ├── docs/  
+│   ├── src/  
+│   └── tests/  
+│  
+├── Data-Warehouse/  
+│   ├── docs/  
+│   ├── sql/  
+│   └── docker/  
+│  
+├── Weather-Analytics/  
+│   ├── airbyte/  
+│   ├── dbt/  
+│   ├── evidence/  
+│   ├── postgresql/  
+│   └── docker/  
+│  
+├── ETL-Real-Time/  
+│   ├── airflow/  
+│   ├── kafka/  
+│   ├── spark/  
+│   └── cassandra/  
+│  
+├── search-ssp-sc/  
+│   ├── src/  
+│   ├── docker/  
+│   └── docs/  
+│  
+└── README.md  
 
 ---
 
