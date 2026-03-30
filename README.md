@@ -1,243 +1,232 @@
-# 🎯 Analytics Engineering & Data Engineering Portfolio
+# 🎯 Analytics Engineering Portfolio
 
-**Portfólio profissional com projetos práticos de Analytics Engineering, Engenharia de Dados e Dados Públicos.**
+![dbt](https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white)
+![BigQuery](https://img.shields.io/badge/BigQuery-4285F4?logo=googlecloud&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![Airbyte](https://img.shields.io/badge/Airbyte-615EFF?logo=airbyte&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![Databricks](https://img.shields.io/badge/Databricks-FF3621?logo=databricks&logoColor=white)
+![Last Updated](https://img.shields.io/badge/Atualizado-Mar%202026-brightgreen)
 
-Foco em transformação de dados, modelagem dimensional, pipelines ELT modernos, ingestão configurável e SQL avançado.
+**Portfólio profissional com projetos práticos de Analytics Engineering e Dados Públicos (GovTech).**
+
+Foco em transformação de dados, modelagem dimensional, pipelines ELT modernos, data quality e SQL avançado.
+
+> 💡 SQL é a linguagem central deste portfólio — os modelos dbt estão nas pastas `/dbt/models` de cada projeto.
 
 ---
 
-# 💼 Sobre
+## 🧪 Data Quality
 
-Sou um profissional de tecnologia com trajetória sólida em engenharia de requisitos, modelagem de dados, integrações e análise técnica, atualmente em transição avançada para Analytics Engineering. Ao longo da carreira, atuei profundamente com SQL, modelagem de dados, entendimento de regras de negócio e suporte técnico a times de desenvolvimento — competências que hoje sustentam minha atuação em projetos analíticos.
-Aprofundei minha formação com a Pós-Graduação em Engenharia de Dados pela Data Science Academy (em parceria com a Faculdade Facint), concluída em 2025, onde desenvolvi bases teóricas e práticas em arquitetura de dados, pipelines, modelagem e processamento distribuído. Complementando essa formação, concluí também a Formação em Engenharia de Analytics da Indicium.ai, incluindo projeto prático com dbt Cloud + Databricks, e estou participando do processo para a Certificação Analytics Engineer.
-Essa combinação de experiência prévia + formação técnica me permite construir pipelines modernos, modelos analíticos confiáveis e documentação clara e orientada ao negócio. Atualmente, concentro meus esforços em projetos envolvendo dados públicos (GovTech), criando pipelines configuráveis, modelos analíticos e métricas como licitado x contratado e execução orçamentária, sempre com foco em qualidade, governança e clareza técnica.
+✅ **49 testes automatizados** distribuídos entre os projetos — cobrindo unicidade, integridade referencial, nulidade e regras de negócio.
 
-- **Modelagem dimensional** (Star Schema, SCD Tipo 2/3)  
-- **Transformações SQL** e dbt  
-- **Pipelines ELT/ETL** modernos  
-- **Data Quality**, governança e documentação  
-- **Integrações e ingestão de dados públicos**  
+---
+
+## 💼 Sobre
+
+Profissional de tecnologia com 22 anos de trajetória, especializado em Analytics Engineering com foco em dados públicos (GovTech). Ao longo da carreira, atuei com SQL, modelagem de dados, entendimento de regras de negócio e suporte técnico a times de desenvolvimento — competências que sustentam diretamente minha atuação em projetos analíticos.
+
+Concluí a **Pós-Graduação em Engenharia de Dados** (Data Science Academy / Facint, 2025) e a **Formação em Engenharia de Analytics da Indicium.ai**, incluindo projeto prático com dbt Cloud + Databricks. Atualmente, aguardo o **Desafio Final da Certificação Analytics Engineer by Indicium**.
+
+Concentro meus esforços em projetos de dados públicos: pipelines configuráveis, modelos analíticos e métricas como *licitado x contratado* e *execução orçamentária*, sempre com foco em qualidade, governança e clareza técnica.
+
+**Competências centrais:**
+- **Modelagem dimensional** (Star Schema, SCD Tipo 2/3)
+- **Transformações SQL** e dbt (tests, docs, macros, lineage)
+- **Pipelines ELT** modernos e configuráveis
+- **Data Quality** e governança
 - **Pipelines analíticos para governo e finanças**
 
-**Stack principal:** SQL, dbt, PostgreSQL, BigQuery, Airbyte, Python, Docker
+**Stack principal:** SQL · dbt · PostgreSQL · BigQuery · Airbyte · Python · Docker
 
 ---
 
-# 🚀 Projetos
+## 🚀 Projetos
 
-## 📊 Analytics Engineering
+### 📊 Analytics Engineering
 
-### 1. Data Warehouse com Modelagem Dimensional  
+#### 1. Data Warehouse com Modelagem Dimensional
+
 **Implementação completa de Data Warehouse local com modelagem Star Schema**
 
-**Stack:** PostgreSQL, SQL, Docker, Ubuntu  
-**Técnicas:**  
-- ⭐ Modelagem dimensional (Star Schema)  
-- 🔄 SCD Tipo 2 e Tipo 3  
-- ⚙️ Procedures e Functions SQL  
-- 🔍 Views materializadas  
-- 📊 Processo ETL completo  
+**Stack:** PostgreSQL · SQL · Docker · Ubuntu
 
-📁 **Documentação:** [Data-Warehouse/README.md](Data-Warehouse/README.md)
+**Técnicas:**
+- ⭐ Modelagem dimensional (Star Schema)
+- 🔄 SCD Tipo 2 e Tipo 3
+- ⚙️ Procedures e Functions SQL
+- 🔍 Views materializadas
+- 📊 Processo ETL completo
+
+📁 **Documentação:** [Data-Warehouse/README.md](https://github.com/jeysel/Analytics-Engineer/blob/main/Data-Warehouse/README.md)
 
 ---
 
-### 2. Pipeline ELT Moderno: Weather Analytics  
+#### 2. Pipeline ELT Moderno: Weather Analytics
+
 **Pipeline Analytics end-to-end com stack moderna cloud**
 
-**Stack:** Open-Meteo → PostgreSQL → Airbyte → BigQuery → dbt → Evidence.dev  
-**Arquitetura:** API → Ingestão → DW → Transformações → Dashboard  
+**Stack:** Open-Meteo → PostgreSQL → Airbyte → BigQuery → dbt → Evidence.dev
 
-📁 **Documentação:** [Weather-Analytics/README.md](Weather-Analytics/README.md)  
+**Arquitetura:** API → Ingestão → DW → Transformações → Dashboard
+
+📁 **Documentação:** [Weather-Analytics/README.md](https://github.com/jeysel/Analytics-Engineer/blob/main/Weather-Analytics/README.md)
 🌐 **Dashboard:** https://jeysel.github.io/Analytics-Engineer/
- 
----
-
-## 🔧 Data Engineering
-
-### 3. ETL Real-Time com Streaming  
-**Pipeline ETL tempo real para dados governamentais**
-
-**Stack:** Airflow, Kafka, Spark Streaming, Cassandra, Python  
-📁 **Documentação:** [ETL-Real-Time/Guia-Execução.md](ETL-Real-Time/Guia-Execução.md)
 
 ---
 
-### 4. Extração de Dados com OCR  
-**Sistema automático de extração de dados estruturados de PDFs**
+### 🏛️ Dados Públicos (GovTech)
 
-**Stack:** Python, OCR (Tesseract), PostgreSQL, Docker  
-📁 **Documentação:** [search-ssp-sc/README.md](search-ssp-sc/README.md)
+#### 3. Compras Públicas — Pipeline de Dados
 
----
+**Status:** 🟡 *Em desenvolvimento*
 
-# 🏛️ Dados Públicos (GovTech) — *Novos Projetos*
-
-## 🛒 5. Compras Públicas — Pipeline de Dados  
-**Status:** 🟡 *Em desenvolvimento*  
-Pipeline completo para ingestão, padronização e análise de compras públicas (SC + Betha).  
+Pipeline completo para ingestão, padronização e análise de compras públicas (SC + Betha).
 Foco em **licitado x contratado**, competitividade e comportamento dos órgãos.
 
-📁 **Projeto:** [compras-publicas/](compras-publicas/)  
-📄 **README:** [compras-publicas/README.md](compras-publicas/README.md)
+📁 **Projeto:** [compras-publicas/README.md](https://github.com/jeysel/Analytics-Engineer/blob/main/compras-publicas/README.md)
 
 ---
 
-## 💰 6. Orçamento Público — PPA, LDO, LOA  
-**Status:** ⚪ *Backlog*  
-Pipeline para análise de planejamento e execução orçamentária (SICONFI + SC).  
-Foco em **dotação inicial x atualizada x executada**.
+### 🔧 Data Engineering (Base de Ingestão)
 
-📁 **Projeto:** [orcamento-publico/](orcamento-publico/)
-📄 **README:** [orcamento-publico/README.md](orcamento-publico/README.md)
+#### 4. ETL Real-Time com Streaming
 
----
+**Pipeline ETL tempo real para dados governamentais**
 
-## 📈 7. API Financeira — BCB, CVM, Tesouro  
-**Status:** ⚪ *Backlog*  
-Pipeline para ingestão e análise de indicadores financeiros, fundos e títulos públicos.
+> Este projeto demonstra compreensão de pipelines de ingestão em tempo real como base para camadas analíticas. O foco do portfólio principal permanece em transformação, modelagem e qualidade de dados (Analytics Engineering).
 
-📁 **Projeto:** [api-financeira/](api-financeira/)
-📄 **README:** [api-financeira/README.md](api-financeira/README.md)
+**Stack:** Airflow · Kafka · Spark Streaming · Cassandra · Python
+
+📁 **Documentação:** [ETL-Real-Time/Guia-Execução.md](https://github.com/jeysel/Analytics-Engineer/blob/main/ETL-Real-Time/Guia-Execu%C3%A7%C3%A3o.md)
 
 ---
 
----
+#### 5. Extração de Dados com OCR
 
-# 📚 Formação e Projetos de Curso
+**Sistema automático de extração de dados estruturados de PDFs**
 
-Concluí a **Formação em Engenharia de Analytics da Indicium.ai**, composta por trilha completa em fundamentos, SQL, modelagem analítica, dbt, storytelling, data design e dashboards.  
-Essa formação estruturada reforça minha base teórica e prática em **Analytics Engineering**.
+**Stack:** Python · OCR (Tesseract) · PostgreSQL · Docker
 
----
-
-## 🎓 Projeto Prático — Engenharia de Analytics com dbt (Indicium.ai)
-
-Durante o módulo de Engenharia de Analytics, desenvolvi um projeto completo utilizando **dbt Cloud** e **Databricks**, aplicando boas práticas de modelagem, versionamento e transformação de dados em arquitetura Lakehouse.
-
-🔗 **Repositório do projeto (fork):**  
-https://github.com/jeysel/banvic-dbt
-
-**Principais aprendizados aplicados:**
-
-- Organização de camadas dbt (staging → intermediate → marts)  
-- Modelagem incremental em ambiente Lakehouse  
-- Testes e documentação nativos do dbt Cloud  
-- Integração dbt Cloud → Databricks SQL Warehouse  
-- Transformações orientadas ao negócio  
-- Estrutura de projeto profissional e versionamento  
-
-Esse projeto complementa meus projetos autorais e reforça minha base prática em **dbt + Databricks**, stack amplamente utilizada no mercado.
+📁 **Documentação:** [search-ssp-sc/README.md](https://github.com/jeysel/Analytics-Engineer/blob/main/search-ssp-sc/README.md)
 
 ---
 
-## 🧪 Desafio Final — Certificação Analytics Engineer (Indicium.ai)
+## 🎓 Formação e Projetos de Curso
 
-Após concluir toda a trilha, estou apto a participar do **Desafio Final da Indicium**, etapa prática que avalia habilidades reais de Analytics Engineering em um projeto completo.
+Concluí a **Formação em Engenharia de Analytics da Indicium.ai**, com trilha completa em fundamentos, SQL, modelagem analítica, dbt, storytelling, data design e dashboards.
 
-📌 **Status:** Aguardando escopo do desafio  
-📁 **Repositório:** *(será adicionado assim que o projeto iniciar)*
+### Projeto Prático — dbt Cloud + Databricks (Indicium.ai)
 
-Caso aprovado:
+Projeto completo aplicando boas práticas de modelagem, versionamento e transformação de dados em arquitetura Lakehouse.
 
-- receberei a **certificação oficial de Analytics Engineer pela Indicium.ai**  
-- serei incluído no **pool de talentos da Indicium**, com acesso a oportunidades exclusivas  
+🔗 **Repositório:** https://github.com/jeysel/banvic-dbt
 
-O desafio consolida competências como:
-
-- pipelines ELT completos  
-- modelagem dimensional aplicada  
-- dbt Cloud avançado (tests, docs, macros, exposures)  
-- boas práticas de engenharia e governança  
-- entrega orientada a valor  
+**Aplicado no projeto:**
+- Organização de camadas dbt (staging → intermediate → marts)
+- Modelagem incremental em ambiente Lakehouse
+- Testes e documentação nativos do dbt Cloud
+- Integração dbt Cloud → Databricks SQL Warehouse
+- Transformações orientadas ao negócio
 
 ---
 
-# 📚 Estrutura do Repositório
+### 🏆 Desafio Final — Certificação Analytics Engineer (Indicium.ai)
 
-Analytics-Engineer/  
-│  
-├── compras-publicas/  
-│   ├── data/  
-│   ├── docs/  
-│   ├── src/  
-│   └── tests/  
-│  
-├── orcamento-publico/  
-│   ├── data/  
-│   ├── docs/  
-│   ├── src/  
-│   └── tests/  
-│  
-├── api-financeira/  
-│   ├── data/  
-│   ├── docs/  
-│   ├── src/  
-│   └── tests/  
-│  
-├── Data-Warehouse/  
-│   ├── docs/  
-│   ├── sql/  
-│   └── docker/  
-│  
-├── Weather-Analytics/  
-│   ├── airbyte/  
-│   ├── dbt/  
-│   ├── evidence/  
-│   ├── postgresql/  
-│   └── docker/  
-│  
-├── ETL-Real-Time/  
-│   ├── airflow/  
-│   ├── kafka/  
-│   ├── spark/  
-│   └── cassandra/  
-│  
-├── search-ssp-sc/  
-│   ├── src/  
-│   ├── docker/  
-│   └── docs/  
-│  
-└── README.md  
+📌 **Status:** Aguardando escopo do desafio
+
+Etapa prática que avalia habilidades reais de Analytics Engineering em projeto completo. Caso aprovado:
+- Certificação oficial **Analytics Engineer by Indicium**
+- Inclusão no **pool de talentos da Indicium** com acesso a oportunidades exclusivas
+
+**Competências avaliadas:** pipelines ELT · modelagem dimensional · dbt avançado (tests, docs, macros, exposures) · governança · entrega orientada a valor
+
+📁 **Repositório:** *(será adicionado ao iniciar o projeto)*
 
 ---
 
-# 💼 Skills
+## 🗺️ Roadmap — Próximos Projetos
+
+| Projeto | Descrição | Previsão |
+|---|---|---|
+| 💰 Orçamento Público | PPA, LDO, LOA — SICONFI + SC. Foco em dotação inicial x atualizada x executada | Q2 2026 |
+| 📈 API Financeira | Indicadores financeiros, fundos e títulos públicos — BCB, CVM, Tesouro | Q2 2026 |
+
+---
+
+## 📚 Estrutura do Repositório
+
+```
+Analytics-Engineer/
+│
+├── compras-publicas/
+│   ├── data/
+│   ├── docs/
+│   ├── src/
+│   └── tests/
+│
+├── Data-Warehouse/
+│   ├── docs/
+│   ├── sql/
+│   └── docker/
+│
+├── Weather-Analytics/
+│   ├── airbyte/
+│   ├── dbt/
+│   ├── evidence/
+│   ├── postgresql/
+│   └── docker/
+│
+├── ETL-Real-Time/
+│   ├── airflow/
+│   ├── kafka/
+│   ├── spark/
+│   └── cassandra/
+│
+├── search-ssp-sc/
+│   ├── src/
+│   ├── docker/
+│   └── docs/
+│
+└── README.md
+```
+
+---
+
+## 💼 Skills
 
 ### Analytics Engineering
-- SQL avançado (Window Functions, CTEs, otimização)  
-- Modelagem dimensional (Star, Snowflake, SCD 1/2/3)  
-- dbt (tests, docs, macros, lineage)  
-- Data Quality e governança  
-- Data Marts e DW  
+- SQL avançado (Window Functions, CTEs, otimização)
+- Modelagem dimensional (Star, Snowflake, SCD 1/2/3)
+- dbt (tests, docs, macros, lineage)
+- Data Quality e governança
+- Data Marts e DW
 
 ### Data Engineering
-- Python, SQL  
-- Airflow, Kafka, Spark Streaming  
-- PostgreSQL, Cassandra, BigQuery  
-- Airbyte, Docker, Git, Terraform  
-- AWS (S3, Glue, Athena), GCP (BigQuery)
+- Python, SQL
+- Airflow, Kafka, Spark Streaming
+- PostgreSQL, Cassandra, BigQuery
+- Airbyte, Docker, Git, Terraform
+- AWS (S3, Glue, Athena) · GCP (BigQuery)
 
 ---
 
-# 🎯 Foco Atual
+## 🎯 Foco Atual
 
-**Analytics Engineering + Dados Públicos**  
-- Pipelines analíticos para governo  
-- Ingestão configurável (múltiplas fontes)  
-- Modelagem de compras e orçamento público  
-- Métricas: licitado x contratado, execução orçamentária  
-- Data Quality e documentação técnica  
+**Analytics Engineering + Dados Públicos (GovTech)**
+
+- Pipelines analíticos para governo
+- Ingestão configurável (múltiplas fontes)
+- Modelagem de compras e orçamento público
+- Métricas: licitado x contratado, execução orçamentária
+- Data Quality e documentação técnica
 
 ---
 
-# 📫 Contato
+## 📫 Contato
 
-📧 jeysel@gmail.com  
-💼 https://www.linkedin.com/in/jeyselpachecobastos/  
-🐙 https://github.com/jeysel  
+📧 [jeysel@gmail.com](mailto:jeysel@gmail.com)
+💼 https://www.linkedin.com/in/jeyselpachecobastos/
+🐙 https://github.com/jeysel
 📍 Santa Catarina, Brasil
-
----
-
-**Última atualização:** 2026
