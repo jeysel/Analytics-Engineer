@@ -8,7 +8,9 @@ Foco em transformação de dados, modelagem dimensional, pipelines ELT modernos,
 
 # 💼 Sobre
 
-Profissional de dados com experiência em **Analytics Engineering** e **Engenharia de Dados**, atuando com:
+Sou um profissional de tecnologia com trajetória sólida em engenharia de requisitos, modelagem de dados, integrações e análise técnica, atualmente em transição avançada para Analytics Engineering. Ao longo da carreira, atuei profundamente com SQL, modelagem de dados, entendimento de regras de negócio e suporte técnico a times de desenvolvimento — competências que hoje sustentam minha atuação em projetos analíticos.
+Aprofundei minha formação com a Pós-Graduação em Engenharia de Dados pela Data Science Academy (em parceria com a Faculdade Facint), concluída em 2025, onde desenvolvi bases teóricas e práticas em arquitetura de dados, pipelines, modelagem e processamento distribuído. Complementando essa formação, concluí também a Formação em Engenharia de Analytics da Indicium.ai, incluindo projeto prático com dbt Cloud + Databricks, e estou participando do processo para a Certificação Analytics Engineer.
+Essa combinação de experiência prévia + formação técnica me permite construir pipelines modernos, modelos analíticos confiáveis e documentação clara e orientada ao negócio. Atualmente, concentro meus esforços em projetos envolvendo dados públicos (GovTech), criando pipelines configuráveis, modelos analíticos e métricas como licitado x contratado e execução orçamentária, sempre com foco em qualidade, governança e clareza técnica.
 
 - **Modelagem dimensional** (Star Schema, SCD Tipo 2/3)  
 - **Transformações SQL** e dbt  
@@ -97,6 +99,8 @@ Pipeline para ingestão e análise de indicadores financeiros, fundos e títulos
 
 📁 **Projeto:** [api-financeira/](api-financeira/)
 📄 **README:** [api-financeira/README.md](api-financeira/README.md)
+
+---
 
 ---
 
@@ -236,4 +240,4 @@ Analytics-Engineer/
 
 ---
 
-**Última atualização:** Março 2026
+**Última atualização:** 2026
