@@ -11,9 +11,9 @@
 
 **Portfólio profissional com projetos práticos de Analytics Engineering e Dados Públicos (GovTech).**
 
-Foco em transformação de dados, modelagem dimensional, pipelines ELT modernos, data quality e SQL avançado.
+Foco em modelagem dimensional, transformações SQL, pipelines ELT modernos e data quality.
 
-> 💡 SQL é a linguagem central deste portfólio — os modelos dbt estão nas pastas `/dbt/models` de cada projeto.
+> 💡 SQL é a linguagem central deste portfólio — os modelos dbt estão nas pastas `/dbt/models` de cada projeto e as queries analíticas em `Scripts-SQL/`.
 
 ---
 
@@ -56,8 +56,8 @@ Concentro meus esforços em projetos de dados públicos: pipelines configurávei
 - ⭐ Modelagem dimensional (Star Schema)
 - 🔄 SCD Tipo 2 e Tipo 3
 - ⚙️ Procedures e Functions SQL
-- 🔍 Views materializadas
-- 📊 Processo ETL completo
+- 🔍 Views e Views Materializadas
+- 📊 Queries analíticas avançadas (Window Functions, CTEs, RFM)
 
 📁 **Documentação:** [Data-Warehouse/README.md](https://github.com/jeysel/Analytics-Engineer/blob/main/Data-Warehouse/README.md)
 
@@ -70,6 +70,11 @@ Concentro meus esforços em projetos de dados públicos: pipelines configurávei
 **Stack:** Open-Meteo → PostgreSQL → Airbyte → BigQuery → dbt → Evidence.dev
 
 **Arquitetura:** API → Ingestão → DW → Transformações → Dashboard
+
+**Destaques:**
+- Modelos dbt em 3 camadas (staging → intermediate → marts)
+- Macros reutilizáveis (WMO codes, Beaufort scale, testes de data quality)
+- Dashboard publicado com Evidence.dev
 
 📁 **Documentação:** [Weather-Analytics/README.md](https://github.com/jeysel/Analytics-Engineer/blob/main/Weather-Analytics/README.md)
 🌐 **Dashboard:** https://jeysel.github.io/Analytics-Engineer/
@@ -86,30 +91,6 @@ Pipeline completo para ingestão, padronização e análise de compras públicas
 Foco em **licitado x contratado**, competitividade e comportamento dos órgãos.
 
 📁 **Projeto:** [compras-publicas/README.md](https://github.com/jeysel/Analytics-Engineer/blob/main/compras-publicas/README.md)
-
----
-
-### 🔧 Data Engineering (Base de Ingestão)
-
-#### 4. ETL Real-Time com Streaming
-
-**Pipeline ETL tempo real para dados governamentais**
-
-> Este projeto demonstra compreensão de pipelines de ingestão em tempo real como base para camadas analíticas. O foco do portfólio principal permanece em transformação, modelagem e qualidade de dados (Analytics Engineering).
-
-**Stack:** Airflow · Kafka · Spark Streaming · Cassandra · Python
-
-📁 **Documentação:** [ETL-Real-Time/Guia-Execução.md](https://github.com/jeysel/Analytics-Engineer/blob/main/ETL-Real-Time/Guia-Execu%C3%A7%C3%A3o.md)
-
----
-
-#### 5. Extração de Dados com OCR
-
-**Sistema automático de extração de dados estruturados de PDFs**
-
-**Stack:** Python · OCR (Tesseract) · PostgreSQL · Docker
-
-📁 **Documentação:** [search-ssp-sc/README.md](https://github.com/jeysel/Analytics-Engineer/blob/main/search-ssp-sc/README.md)
 
 ---
 
@@ -167,27 +148,29 @@ Analytics-Engineer/
 │   └── tests/
 │
 ├── Data-Warehouse/
-│   ├── docs/
-│   ├── sql/
-│   └── docker/
+│   ├── Documentacao/
+│   ├── Scripts-SQL/
+│   │   ├── Modelo-Fisico.sql
+│   │   ├── Carga-Dados.sql
+│   │   ├── Procedures.sql
+│   │   ├── Functions.sql
+│   │   ├── Views.sql
+│   │   └── Queries-Analise.sql
+│   └── README.md
 │
 ├── Weather-Analytics/
 │   ├── airbyte/
 │   ├── dbt/
+│   │   ├── macros/
+│   │   │   ├── weather_utils.sql
+│   │   │   └── test_accepted_range.sql
+│   │   └── models/
+│   │       ├── staging/
+│   │       ├── intermediate/
+│   │       └── marts/
 │   ├── evidence/
 │   ├── postgresql/
 │   └── docker/
-│
-├── ETL-Real-Time/
-│   ├── airflow/
-│   ├── kafka/
-│   ├── spark/
-│   └── cassandra/
-│
-├── search-ssp-sc/
-│   ├── src/
-│   ├── docker/
-│   └── docs/
 │
 └── README.md
 ```
@@ -197,17 +180,15 @@ Analytics-Engineer/
 ## 💼 Skills
 
 ### Analytics Engineering
-- SQL avançado (Window Functions, CTEs, otimização)
+- SQL avançado (Window Functions, CTEs, otimização, RFM)
 - Modelagem dimensional (Star, Snowflake, SCD 1/2/3)
 - dbt (tests, docs, macros, lineage)
 - Data Quality e governança
 - Data Marts e DW
 
-### Data Engineering
-- Python, SQL
-- Airflow, Kafka, Spark Streaming
-- PostgreSQL, Cassandra, BigQuery
-- Airbyte, Docker, Git, Terraform
+### Infraestrutura & Ingestão
+- PostgreSQL · BigQuery · Airbyte
+- Docker · Git
 - AWS (S3, Glue, Athena) · GCP (BigQuery)
 
 ---
