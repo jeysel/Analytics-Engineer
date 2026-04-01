@@ -4,10 +4,11 @@
 # Trigger: push na branch main
 # Fluxo:
 #   1. Sobe PostgreSQL
-#   2. Roda dbt seed (carrega CSVs)
-#   3. Roda dbt build (transforma + testa)
-#   4. Builda Evidence (gera site estático)
-#   5. Publica no GitHub Pages
+#   2. Inicializa schemas + dim_datas
+#   3. Roda dbt seed (carrega CSVs)
+#   4. Roda dbt build (transforma + testa)
+#   5. Builda Evidence (gera site estático)
+#   6. Publica no GitHub Pages
 # ─────────────────────────────────────────────────────────────────────────────
 
 name: Pipeline Compras Públicas
@@ -15,7 +16,7 @@ name: Pipeline Compras Públicas
 on:
   push:
     branches: [main]
-  workflow_dispatch:  # permite rodar manualmente
+  workflow_dispatch:
 
 jobs:
   pipeline:
@@ -37,7 +38,7 @@ jobs:
           --health-retries 5
 
     steps:
-      # ── Checkout ──────────────────────────────────────────────────────────
+      # ── Checkout PRIMEIRO ─────────────────────────────────────────────────
       - name: Checkout repositório
         uses: actions/checkout@v4
 
@@ -101,21 +102,31 @@ jobs:
         working-directory: evidence
         run: npm install
 
+      - name: Sources Evidence
+        working-directory: evidence
+        run: npm run sources
+        env:
+          POSTGRES_HOST:      localhost
+          POSTGRES_PORT:      "5432"
+          POSTGRES_DATABASE:  compras_publicas
+          POSTGRES_USER:      cp_user
+          POSTGRES_PASSWORD:  cp_pass
+          POSTGRES_SCHEMA:    marts
+
       - name: Build Evidence (site estático)
         working-directory: evidence
         run: npm run build
         env:
-          EVIDENCE_DATABASE:      postgres
-          POSTGRES_HOST:          localhost
-          POSTGRES_PORT:          "5432"
-          POSTGRES_DATABASE:      compras_publicas
-          POSTGRES_USER:          cp_user
-          POSTGRES_PASSWORD:      cp_pass
-          POSTGRES_SCHEMA:        marts
+          POSTGRES_HOST:      localhost
+          POSTGRES_PORT:      "5432"
+          POSTGRES_DATABASE:  compras_publicas
+          POSTGRES_USER:      cp_user
+          POSTGRES_PASSWORD:  cp_pass
+          POSTGRES_SCHEMA:    marts
 
       # ── GitHub Pages ──────────────────────────────────────────────────────
       - name: Publica no GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir:  ./evidence/build
+          publish_dir:  ./evidence/.evidence/template/static
