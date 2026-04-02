@@ -114,5 +114,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir:  ./compras-publicas/evidence/.evidence/template/static
+          publish_dir:  ./compras-publicas/evidence/build
           destination_dir: compras-publicas
