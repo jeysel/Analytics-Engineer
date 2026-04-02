@@ -7,7 +7,8 @@
 ![Airbyte](https://img.shields.io/badge/Airbyte-615EFF?logo=airbyte&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 ![Databricks](https://img.shields.io/badge/Databricks-FF3621?logo=databricks&logoColor=white)
-![Last Updated](https://img.shields.io/badge/Atualizado-Mar%202026-brightgreen)
+![Last Updated](https://img.shields.io/badge/Atualizado-Abril%202026-brightgreen)
+
 
 **Portfólio profissional com projetos práticos de Analytics Engineering e Dados Públicos (GovTech).**
 
