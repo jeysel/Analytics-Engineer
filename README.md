@@ -1,14 +1,15 @@
-🎯 Analytics Engineering Portfolio
-https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white
-https://img.shields.io/badge/BigQuery-4285F4?logo=googlecloud&logoColor=white
-https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white
-https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white
-https://img.shields.io/badge/Airbyte-615EFF?logo=airbyte&logoColor=white
-https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white
-https://img.shields.io/badge/Databricks-FF3621?logo=databricks&logoColor=white
-https://img.shields.io/badge/Atualizado-Mar%202026-brightgreen
+# 🎯 Analytics Engineering Portfolio
 
-Portfólio profissional com projetos práticos de Analytics Engineering, com foco em dados públicos (GovTech), modelagem dimensional, pipelines ELT modernos e data quality.
+![dbt](https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white)
+![BigQuery](https://img.shields.io/badge/BigQuery-4285F4?logo=googlecloud&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![Airbyte](https://img.shields.io/badge/Airbyte-615EFF?logo=airbyte&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![Databricks](https://img.shields.io/badge/Databricks-FF3621?logo=databricks&logoColor=white)
+![Last Updated](https://img.shields.io/badge/Atualizado-Mar%202026-brightgreen)
+
+**Portfólio profissional com projetos práticos de Analytics Engineering e Dados Públicos (GovTech).**
 
 💡 SQL é a linguagem central deste portfólio — modelos dbt estão em /dbt/models e queries analíticas em Scripts-SQL/.
 
