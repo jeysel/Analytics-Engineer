@@ -98,7 +98,7 @@ Projeto completo aplicando boas práticas de modelagem e transformação em arqu
 🔗 Repositório: https://github.com/jeysel/banvic-dbt
 
 🏆 Desafio Final — Certificação Analytics Engineer (Indicium.ai)
-📌 Status: Aguardando escopo
+📌 Status: Enviado/Aguardando avaliação
 Competências avaliadas: pipelines ELT · modelagem dimensional · dbt avançado · governança · entrega orientada a valor.
 
 🗺️ Roadmap — Próximos Projetos
