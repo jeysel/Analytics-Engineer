@@ -30,25 +30,20 @@ freshness
 regras de negócio
 
 💼 Sobre
-Profissional de tecnologia com 22 anos de experiência, especializado em Analytics Engineering com foco em dados públicos. Minha trajetória combina SQL avançado, modelagem de dados, entendimento de regras de negócio e integrações complexas — base essencial para construir pipelines analíticos confiáveis.
+Analytics Engineer com base sólida em desenvolvimento de software, modelagem de dados e integrações complexas, hoje focado em Engenharia de Analytics.
 
-Concluí a Pós-Graduação em Engenharia de Dados (Data Science Academy / Facint, 2025) e a Formação em Engenharia de Analytics da Indicium.ai, incluindo projeto prático com dbt Cloud + Databricks. Atualmente, aguardo o Desafio Final da Certificação Analytics Engineer by Indicium.
+Minha proposta de valor: Dados com Visão de Produto.
+Unindo anos de experiência em modelagem de dados transacionais e descoberta de requisitos, realizo um discovery de dados muito mais assertivo. Não apenas construo o pipeline, mas garanto que a arquitetura atenda às necessidades reais de negócio, com governança, documentação clara e foco em usabilidade.
 
-Atuo principalmente em projetos de dados públicos: ingestão configurável, métricas analíticas (licitado x contratado, competitividade, execução orçamentária) e governança.
+Stack e Expertise Técnica:
+• Transformação & Modelagem: dbt (Cloud/Core), Databricks, BigQuery, SQL Avançado. Tradução de modelos relacionais complexos para arquiteturas dimensionais (Star Schema/Kimball).
+• Pipelines & Arquitetura: ELT modernos (Airbyte), Data Quality automatizado, Lakehouse.
+• Integrações: APIs (OAuth, webhooks, PIX), fluxos sistêmicos.
 
-Competências centrais:
+Formação
+🎓 Pós-graduado em Engenharia de Dados (DSA) e Formação em Analytics Engineering (Indicium).
+🚀 Desenvolvo projetos práticos end-to-end (Ingestão -> Warehouse -> Modelagem dbt -> BI) aplicando as melhores práticas de engenharia de software ao mundo dos dados.
 
-Modelagem dimensional (Star Schema, SCD Tipo 2/3)
-
-Transformações SQL e dbt (tests, docs, macros, lineage)
-
-Pipelines ELT modernos
-
-Data Quality e governança
-
-Pipelines analíticos para governo e finanças
-
-Stack principal: SQL · dbt · PostgreSQL · BigQuery · Airbyte · Python · Docker
 
 🚀 Projetos
 🏛️ 1. Compras Públicas — Pipeline de Dados (GovTech)
@@ -108,8 +103,8 @@ Competências avaliadas: pipelines ELT · modelagem dimensional · dbt avançado
 
 🗺️ Roadmap — Próximos Projetos
 Projeto	Descrição	Previsão
-💰 Orçamento Público	PPA, LDO, LOA — SICONFI + SC	Q2 2026
-📈 API Financeira	Indicadores financeiros, fundos e títulos públicos	Q2 2026
+💰 CVM - Fundos de Investimento	Q2 2026 - Airflow | DBT | Databricks | Looker Studio
+
 
 
 ---
