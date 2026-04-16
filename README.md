@@ -9,41 +9,7 @@
 ![Databricks](https://img.shields.io/badge/Databricks-FF3621?logo=databricks&logoColor=white)
 ![Last Updated](https://img.shields.io/badge/Atualizado-Abril%202026-brightgreen)
 
-
 **Portfólio profissional com projetos práticos de Analytics Engineering e Dados Públicos (GovTech).**
-
-💡 SQL é a linguagem central deste portfólio — modelos dbt estão em /dbt/models e queries analíticas em Scripts-SQL/.
-
-🧪 Data Quality
-Este portfólio contém 49 testes automatizados, cobrindo:
-
-unicidade
-
-integridade referencial
-
-nulidade
-
-ranges
-
-freshness
-
-regras de negócio
-
-💼 Sobre
-Analytics Engineer com base sólida em desenvolvimento de software, modelagem de dados e integrações complexas, hoje focado em Engenharia de Analytics.
-
-Minha proposta de valor: Dados com Visão de Produto.
-Unindo anos de experiência em modelagem de dados transacionais e descoberta de requisitos, realizo um discovery de dados muito mais assertivo. Não apenas construo o pipeline, mas garanto que a arquitetura atenda às necessidades reais de negócio, com governança, documentação clara e foco em usabilidade.
-
-Stack e Expertise Técnica:
-• Transformação & Modelagem: dbt (Cloud/Core), Databricks, BigQuery, SQL Avançado. Tradução de modelos relacionais complexos para arquiteturas dimensionais (Star Schema/Kimball).
-• Pipelines & Arquitetura: ELT modernos (Airbyte), Data Quality automatizado, Lakehouse.
-• Integrações: APIs (OAuth, webhooks, PIX), fluxos sistêmicos.
-
-Formação
-🎓 Pós-graduado em Engenharia de Dados (DSA) e Formação em Analytics Engineering (Indicium).
-🚀 Desenvolvo projetos práticos end-to-end (Ingestão -> Warehouse -> Modelagem dbt -> BI) aplicando as melhores práticas de engenharia de software ao mundo dos dados.
-
 
 🚀 Projetos
 🏛️ 1. Compras Públicas — Pipeline de Dados (GovTech)
@@ -104,8 +70,6 @@ Competências avaliadas: pipelines ELT · modelagem dimensional · dbt avançado
 🗺️ Roadmap — Próximos Projetos
 Projeto	Descrição	Previsão
 💰 CVM - Fundos de Investimento	Q2 2026 - Airflow | DBT | Databricks | Looker Studio
-
-
 
 ---
 
