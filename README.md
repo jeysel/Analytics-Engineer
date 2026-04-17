@@ -57,7 +57,7 @@ Queries analíticas avançadas
 
 📁 Documentação: Data-Warehouse/README.md
 
-🎓 Formação e Projetos de Curso
+## 🎓 Formação e Projetos de Curso
 Projeto Prático — dbt Cloud + Databricks (Indicium.ai)
 Projeto completo aplicando boas práticas de modelagem e transformação em arquitetura Lakehouse.
 
