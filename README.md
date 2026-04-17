@@ -11,7 +11,7 @@
 
 **Portfólio profissional com projetos práticos de Analytics Engineering e Dados Públicos (GovTech).**
 
-🚀 Projetos
+## 🚀 Projetos
 🏛️ 1. Compras Públicas — Pipeline de Dados (GovTech)
 
 Pipeline completo para ingestão, padronização e análise de compras públicas (SC + Betha).
@@ -67,9 +67,10 @@ Projeto completo aplicando boas práticas de modelagem e transformação em arqu
 📌 Status: Enviado/Aguardando avaliação
 Competências avaliadas: pipelines ELT · modelagem dimensional · dbt avançado · governança · entrega orientada a valor.
 
-🗺️ Roadmap — Próximos Projetos
-Projeto	Descrição	Previsão
-💰 CVM - Fundos de Investimento	Q2 2026 - Airflow | DBT | Databricks | Looker Studio
+## 🗺️ Roadmap — Próximos Projetos
+| Projeto | Descrição | Previsão |
+|---------|-----------|----------|
+| 💰 CVM - Fundos de Investimento | Airflow \| DBT \| Databricks \| Looker Studio | Q2 2026 |
 
 ---
 
