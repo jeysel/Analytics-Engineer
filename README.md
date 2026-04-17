@@ -57,7 +57,7 @@ Queries analíticas avançadas
 
 📁 Documentação: Data-Warehouse/README.md
 
-## 🎓 Formação e Projetos de Curso
+## 🎓 Projetos de Curso
 Projeto Prático — dbt Cloud + Databricks (Indicium.ai)
 Projeto completo aplicando boas práticas de modelagem e transformação em arquitetura Lakehouse.
 
@@ -70,7 +70,7 @@ Competências avaliadas: pipelines ELT · modelagem dimensional · dbt avançado
 ## 🗺️ Roadmap — Próximos Projetos
 | Projeto | Descrição | Previsão |
 |---------|-----------|----------|
-| 💰 CVM - Fundos de Investimento | Airflow \| DBT \| Databricks \| Looker Studio | Q2 2026 |
+| 💰 CVM - Fundos de Investimento | Airflow \| DBT \| Databricks \| Looker Studio | Q3 2026 |
 
 ---
 
