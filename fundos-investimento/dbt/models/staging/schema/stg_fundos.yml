@@ -1,0 +1,91 @@
+version: 2
+
+models:
+  - name: stg_fundos__cadastro
+    description: >
+      Cadastro padronizado de fundos de investimento.
+      Uma linha por fundo (CNPJ único). Fonte: bronze.cad_fi (CVM).
+    columns:
+      - name: cnpj_fundo
+        description: "CNPJ do fundo — chave primária natural"
+        tests:
+          - not_null
+          - unique
+
+      - name: nome_fundo
+        description: "Denominação social do fundo"
+        tests:
+          - not_null
+
+      - name: situacao
+        description: "Situação atual do fundo na CVM"
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - 'EM FUNCIONAMENTO NORMAL'
+                - 'CANCELADA'
+                - 'EM LIQUIDAÇÃO EXTRAJUDICIAL'
+                - 'EM LIQUIDAÇÃO ORDINÁRIA'
+                - 'INCORPORAÇÃO'
+                - 'FASE PRÉ-OPERACIONAL'
+
+      - name: tipo_fundo
+        description: "Tipo regulatório do fundo (FI, FIC, FIDC, FII, etc.)"
+
+      - name: classe
+        description: "Classe do fundo conforme Instrução CVM"
+
+      - name: gestor
+        description: "Nome do gestor do fundo"
+
+      - name: cnpj_gestor
+        description: "CNPJ do gestor"
+
+      - name: administrador
+        description: "Nome do administrador"
+
+      - name: cnpj_administrador
+        description: "CNPJ do administrador"
+
+      - name: dt_constituicao
+        description: "Data de constituição do fundo"
+
+      - name: dt_inicio_atividade
+        description: "Data de início de atividade"
+
+      - name: dt_cancelamento
+        description: "Data de cancelamento (NULL para fundos ativos)"
+
+  - name: stg_fundos__cotas_diarias
+    description: >
+      Informes diários padronizados: cota, patrimônio líquido, captação, resgate e cotistas.
+      Uma linha por fundo por dia. Filtrado a partir de `data_inicio_analise`.
+      Fonte: bronze.inf_diario (CVM).
+    columns:
+      - name: cnpj_fundo
+        description: "CNPJ do fundo"
+        tests:
+          - not_null
+
+      - name: dt_competencia
+        description: "Data de competência do informe"
+        tests:
+          - not_null
+
+      - name: vl_cota
+        description: "Valor da cota no fechamento do dia (escala 8 casas decimais)"
+        tests:
+          - not_null
+
+      - name: vl_pl
+        description: "Patrimônio líquido total do fundo no dia"
+
+      - name: vl_captacao
+        description: "Total captado no dia (entradas de novos cotistas)"
+
+      - name: vl_resgate
+        description: "Total resgatado no dia (saídas de cotistas)"
+
+      - name: nr_cotistas
+        description: "Número de cotistas no fechamento do dia"

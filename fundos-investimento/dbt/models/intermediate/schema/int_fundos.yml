@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: int_fundos__ativos
+    description: >
+      Fundos em funcionamento normal com histórico de cotas suficiente para análise.
+      Enriquecido com contagem de dias, datas extremas e flags de elegibilidade.
+      Ephemeral — não materializado como tabela, apenas referenciado nos marts.
+    columns:
+      - name: cnpj_fundo
+        description: "CNPJ do fundo"
+        tests: [not_null, unique]
+      - name: situacao
+        description: "Sempre 'EM FUNCIONAMENTO NORMAL' nesta camada"
+      - name: qtd_dias_com_cota
+        description: "Total de dias com informe diário disponível desde data_inicio_analise"
+      - name: primeira_cota
+        description: "Data do primeiro informe disponível"
+      - name: ultima_cota
+        description: "Data do informe mais recente"
+      - name: pl_maximo_historico
+        description: "Maior PL registrado no período analisado"
+      - name: tem_historico_12m
+        description: "True se o fundo tem ao menos 250 dias úteis de histórico"
+      - name: tem_historico_36m
+        description: "True se o fundo tem ao menos 750 dias úteis de histórico"
+      - name: pl_acima_minimo
+        description: "True se o PL máximo supera a variável pl_minimo_relevante"
+
+  - name: int_fundos__rentabilidade
+    description: >
+      Cotas diárias enriquecidas com retorno diário (retorno_dia) e YTD (retorno_ytd).
+      Calculados via window functions sem self-join.
+      Ephemeral — consumido diretamente por fct_cotas_diarias e mart_rentabilidade_mensal.
+    columns:
+      - name: cnpj_fundo
+        description: "CNPJ do fundo"
+        tests: [not_null]
+      - name: dt_competencia
+        description: "Data de competência"
+        tests: [not_null]
+      - name: vl_cota
+        description: "Valor da cota"
+        tests: [not_null]
+      - name: retorno_dia
+        description: "Retorno percentual em relação ao dia anterior (null no primeiro dia)"
+      - name: retorno_ytd
+        description: "Retorno acumulado desde o primeiro dia útil do ano corrente"
+      - name: fluxo_liquido
+        description: "Captação menos resgate no dia"

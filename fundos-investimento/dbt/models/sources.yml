@@ -1,0 +1,86 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    description: >
+      Dados brutos ingeridos pelo Airflow diretamente da CVM (Comissão de Valores Mobiliários).
+      Tabelas externas no Databricks apontando para arquivos CSV armazenados no DBFS.
+
+    tables:
+      - name: cad_fi
+        description: >
+          Cadastro de fundos de investimento. Atualizado diariamente pelo Airflow.
+          Contém dados cadastrais de todos os fundos registrados na CVM.
+          Nota: freshness não configurada pois o arquivo é um snapshot do estado atual
+          dos fundos (sem campo de data de atualização do registro). Em produção,
+          recomenda-se adicionar um campo de ingestion_timestamp na camada bronze.
+        columns:
+          - name: CNPJ_FUNDO
+            description: "CNPJ do fundo (identificador único)"
+            tests:
+              - not_null
+              - unique
+          - name: DENOM_SOCIAL
+            description: "Denominação social do fundo"
+            tests:
+              - not_null
+          - name: SIT
+            description: "Situação do fundo (EM FUNCIONAMENTO NORMAL, CANCELADA, EM LIQUIDAÇÃO EXTRAJUDICIAL, etc.)"
+            tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    - 'EM FUNCIONAMENTO NORMAL'
+                    - 'CANCELADA'
+                    - 'EM LIQUIDAÇÃO EXTRAJUDICIAL'
+                    - 'EM LIQUIDAÇÃO ORDINÁRIA'
+                    - 'INCORPORAÇÃO'
+                    - 'FASE PRÉ-OPERACIONAL'
+          - name: TP_FUNDO
+            description: "Tipo do fundo (FI, FIC, FIDC, FII, etc.)"
+          - name: CLASSE
+            description: "Classe do fundo conforme CVM"
+          - name: GESTOR
+            description: "Nome do gestor do fundo"
+          - name: CPF_CNPJ_GESTOR
+            description: "CPF ou CNPJ do gestor"
+          - name: ADMIN
+            description: "Nome do administrador do fundo"
+          - name: CNPJ_ADMIN
+            description: "CNPJ do administrador"
+          - name: DT_CONST
+            description: "Data de constituição do fundo (YYYY-MM-DD)"
+          - name: DT_INI_ATIV
+            description: "Data de início de atividade"
+          - name: DT_CANCEL
+            description: "Data de cancelamento (preenchida apenas para fundos cancelados)"
+
+      - name: inf_diario
+        description: >
+          Informes diários de fundos de investimento. Carregado mensalmente pelo Airflow
+          com os dados do mês anterior (arquivo ZIP da CVM extraído para CSV).
+          Cada linha representa um fundo em um dia específico.
+        freshness:
+          warn_after:  { count: 35, period: day }
+          error_after: { count: 45, period: day }
+        loaded_at_field: DT_COMPTC
+        columns:
+          - name: CNPJ_FUNDO
+            description: "CNPJ do fundo"
+            tests:
+              - not_null
+          - name: DT_COMPTC
+            description: "Data de competência do informe (YYYY-MM-DD)"
+            tests:
+              - not_null
+          - name: VL_QUOTA
+            description: "Valor da cota no fechamento do dia"
+          - name: VL_PATRIM_LIQ
+            description: "Patrimônio líquido total do fundo no dia"
+          - name: CAPTC_DIA
+            description: "Captação líquida do dia (entradas de cotistas)"
+          - name: RESG_DIA
+            description: "Resgates do dia (saídas de cotistas)"
+          - name: NR_COTST
+            description: "Número de cotistas no fechamento do dia"

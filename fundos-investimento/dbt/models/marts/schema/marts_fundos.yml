@@ -1,0 +1,119 @@
+version: 2
+
+models:
+  - name: dim_fundo
+    description: >
+      Dimensão de fundos de investimento em funcionamento normal.
+      Uma linha por fundo (CNPJ). Inclui classificação regulatória, dados de gestão
+      e flags de elegibilidade para análises de rentabilidade.
+    columns:
+      - name: sk_fundo
+        description: "Surrogate key gerada por dbt_utils"
+        tests: [not_null, unique]
+      - name: cnpj_fundo
+        description: "CNPJ do fundo — chave natural"
+        tests: [not_null, unique]
+      - name: nome_fundo
+        description: "Denominação social"
+        tests: [not_null]
+      - name: tipo_fundo
+        description: "Tipo regulatório (FI, FIC, FIDC, FII, etc.)"
+      - name: classe
+        description: "Classe do fundo conforme CVM"
+      - name: gestor
+        description: "Nome do gestor"
+      - name: cnpj_gestor
+        description: "CNPJ do gestor"
+      - name: tem_historico_12m
+        description: "True se possui ao menos 250 dias de histórico de cotas"
+      - name: tem_historico_36m
+        description: "True se possui ao menos 750 dias de histórico de cotas"
+      - name: pl_acima_minimo
+        description: "True se o PL máximo supera pl_minimo_relevante (var dbt)"
+
+  - name: dim_gestor
+    description: >
+      Dimensão de gestores. Uma linha por CNPJ de gestor.
+      Agrega quantidade de fundos, AUM total e classes geridas.
+    columns:
+      - name: sk_gestor
+        description: "Surrogate key"
+        tests: [not_null, unique]
+      - name: cnpj_gestor
+        description: "CNPJ do gestor"
+        tests: [not_null, unique]
+      - name: nome_gestor
+        description: "Nome do gestor"
+        tests: [not_null]
+      - name: qtd_fundos_geridos
+        description: "Quantidade de fundos em funcionamento geridos"
+      - name: aum_total_maximo
+        description: "Soma dos PL máximos históricos de todos os fundos geridos"
+
+  - name: fct_cotas_diarias
+    description: >
+      Tabela fato: uma linha por fundo por dia de competência.
+      Inclui cota, PL, captação, resgate, cotistas, retorno diário e YTD.
+      Particionada por mês para performance no Looker Studio.
+    columns:
+      - name: sk_cota
+        description: "Surrogate key da linha (fundo × dia)"
+        tests: [not_null, unique]
+      - name: sk_fundo
+        description: "FK para dim_fundo"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_fundo')
+              field: sk_fundo
+      - name: cnpj_fundo
+        description: "CNPJ do fundo (degenerada)"
+        tests: [not_null]
+      - name: dt_competencia
+        description: "Data de competência do informe"
+        tests: [not_null]
+      - name: vl_cota
+        description: "Valor da cota no fechamento"
+        tests: [not_null]
+      - name: retorno_dia
+        description: "Retorno percentual em relação ao dia anterior"
+      - name: retorno_ytd
+        description: "Retorno acumulado no ano corrente"
+      - name: fluxo_liquido
+        description: "Captação menos resgate no dia"
+
+  - name: mart_rentabilidade_mensal
+    description: >
+      Mart analítico: rentabilidade mensal por fundo, com retornos de 1, 12 e 36 meses.
+      Fonte principal para dashboards no Looker Studio.
+      Uma linha por fundo por mês de referência.
+    columns:
+      - name: sk_rentabilidade_mensal
+        description: "Surrogate key (fundo × mês)"
+        tests: [not_null, unique]
+      - name: sk_fundo
+        description: "FK para dim_fundo"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_fundo')
+              field: sk_fundo
+      - name: mes_ref
+        description: "Mês de referência (primeiro dia do mês)"
+        tests: [not_null]
+      - name: retorno_mes
+        description: "Retorno percentual no mês (decimal)"
+      - name: retorno_12m
+        description: "Retorno acumulado nos últimos 12 meses (rolling)"
+      - name: retorno_36m
+        description: "Retorno acumulado nos últimos 36 meses (rolling)"
+      - name: retorno_mes_pct
+        description: "Retorno mensal em percentual (ex: 1.25 = 1,25%)"
+      - name: retorno_12m_pct
+        description: "Retorno 12 meses em percentual"
+      - name: retorno_36m_pct
+        description: "Retorno 36 meses em percentual"
+      - name: pl_fim_mes
+        description: "Patrimônio líquido no último dia útil do mês"
+      - name: fluxo_liquido_mes
+        description: "Captação menos resgate acumulado no mês"

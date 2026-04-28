@@ -1,0 +1,41 @@
+name: 'fundos_investimento'
+version: '1.0.0'
+config-version: 2
+
+profile: 'fundos_investimento'
+
+model-paths:    ["models"]
+macro-paths:    ["macros"]
+test-paths:     ["tests"]
+seed-paths:     ["seeds"]
+snapshot-paths: ["snapshots"]
+analysis-paths: ["analyses"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  fundos_investimento:
+    staging:
+      +materialized: view
+      +schema: silver
+      +tags: ["staging", "cvm"]
+
+    intermediate:
+      +materialized: ephemeral
+      +tags: ["intermediate"]
+
+    marts:
+      +materialized: table
+      +schema: gold
+      +tags: ["marts", "gold"]
+      +file_format: delta
+
+vars:
+  # Data mínima para filtrar o histórico de cotas (evita processar 20 anos de uma vez em dev)
+  data_inicio_analise: '2020-01-01'
+
+  # Limiar de PL mínimo para considerar um fundo "relevante" nos marts
+  pl_minimo_relevante: 1000000  # R$ 1 milhão
